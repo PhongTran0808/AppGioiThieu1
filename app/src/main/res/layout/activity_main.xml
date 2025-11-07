@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_background"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/top_background_deco"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_marginTop="-100dp"
+
+        android:background="@color/professional_blue"
+
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginBottom="-70dp"
+        android:elevation="10dp"
+        android:src="@drawable/anh"
+        app:civ_border_color="@color/white_background"
+        app:civ_border_width="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/top_background_deco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/info_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/soft_gray"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/HeaderName"
+                android:text="HUỲNH THANH TÚ" />
+
+            <TextView
+                android:id="@+id/tv_app_title"
+                style="@style/HeaderSubtitle"
+                android:text="ỨNG DỤNG LẬP TRÌNH DI ĐỘNG" />
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/professional_blue" />
+
+            <TextView
+                style="@style/InfoItemText"
+                android:text="Khóa: 23" />
+
+            <TextView
+                style="@style/InfoItemText"
+                android:text="Ngành: An Toàn Thông Tin" />
+
+            <TextView
+                style="@style/InfoItemText"
+                android:text="Mục tiêu: Phát triển ứng dụng giới thiệu" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="289dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/professional_blue"
+        android:padding="12dp"
+        android:text="THOÁT ỨNG DỤNG"
+        android:textColor="@color/white_background"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_card" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
